@@ -5,5 +5,5 @@ import tableFromData from './libs/tableFromData.js'
 
 addMdToPage("50 students")
 
-let survey = await dbQuery("SELECT * FROM students")
-tableFromData({ data: survey })
+let students = await dbQuery("SELECT * FROM results limit 50")
+tableFromData({ data: students })
